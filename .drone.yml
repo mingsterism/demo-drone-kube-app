@@ -2,11 +2,11 @@ kind: pipeline
 name: default
 steps:
   - name: test
-    image: golang:1.10-alpine
+    image: golang:alpine
     commands:
       - "go test"
   - name: build
-    image: golang:1.10-alpine
+    image: golang:alpine
     commands:
       - "go build -o ./myapp"
   - name: publish
