@@ -3,11 +3,11 @@ type: kubernetes
 name: golang-app
 steps:
   - name: test
-    image: golang:alpine
+    image: golang:1.14-buster
     commands:
       - "go test"
   - name: build
-    image: golang:alpine
+    image: golang:1.14-buster
     commands:
       - "go build -o ./myapp"
   - name: publish
