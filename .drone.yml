@@ -1,5 +1,6 @@
 kind: pipeline
-name: default
+type: kubernetes
+name: golang-app
 steps:
   - name: test
     image: golang:alpine
