@@ -29,7 +29,7 @@ steps:
       kubernetes_token:
         from_secret: k8s_token
     commands:
-      - kubectl apply -f deployment.yml
+      - kubectl apply -f deployment.yaml
 
 ---
 kind: pipeline
