@@ -30,6 +30,9 @@ steps:
         from_secret: k8s_token # ensure that k8s_token is decoded with base64
     commands:
       - kubectl apply -f deployment.yaml
+trigger:
+  branch:
+    - master
 
 ---
 kind: pipeline
@@ -46,6 +49,9 @@ steps:
     image: alpine
     commands:
       - echo bonjour monde
+trigger:
+  branch:
+    - master
 
 ---
 kind: pipeline
@@ -57,3 +63,6 @@ steps:
     image: alpine
     commands:
       - echo next steps
+trigger:
+  branch:
+    - master
