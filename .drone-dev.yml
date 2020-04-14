@@ -27,7 +27,7 @@ steps:
       kubernetes_cert:
         from_secret: k8s_cert
       kubernetes_token:
-        from_secret: k8s_token
+        from_secret: k8s_token # ensure that k8s_token is decoded with base64
     commands:
       - kubectl apply -f deployment.yaml
 
